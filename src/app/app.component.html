@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="row">
+    <ng-select class=" input" [items]="iller" placeholder="Vakitini Öğrenmek İstediğiniz İli Seçin " bindLabel="label"
+      bindValue="value" [formControl]="ilControl">
+    </ng-select>
+
+  </div>
+
+  <div class="row  vakit">
+    <div class="col" *ngFor="let item of vakit">
+      <strong>
+        {{item.vakit}} : {{item.saat}}
+      </strong>
+     
+      
+    </div>
+
+ 
+   
+  </div>
+  <div class="row container">
+    {{today | date: 'hh:mm dd/MM/YYYY'}}
+  </div>
+</div>
